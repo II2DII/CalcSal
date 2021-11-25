@@ -4,7 +4,12 @@
 #include <ctime>
 #include <iomanip>
 
-using namespace std;
+using std::cout;
+using std::cin;
+using std::string;
+using std::endl;
+using std::fixed;
+using std::setprecision;
 
 void calc(int*, int*);
 void pagMais(double);
@@ -14,14 +19,15 @@ int main(){
     cout << "Digite dois numeros" << endl;
     cin >> x >> y;
     calc(&x, &y);//passando como referência*/
+    
     double salario;
-    cout << "Qualo seu salario?";
+    cout << "Qual o seu salario?";
     cin >> salario;
     pagMais(salario);
     return 0;
 }
 
-//Função que faz várias contas 
+//Função que faz várias operações
 void calc(int* num1, int* num2){//passa 2 ponteiros como parâmetros
     string SN = "n";
     int cont[20], conta=0;
